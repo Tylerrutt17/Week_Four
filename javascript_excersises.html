@@ -1,0 +1,66 @@
+
+<!-- Write a function that accepts string as an argument and if the string is less than 4 charecters return one message, 
+    if it is greater than 12 return another message otherwise return a final message about being accepted.
+
+    Write a function that accepts an argument named tempature. Have at least 6 ranges of tempature that represents a html valid color. 
+Return the color based on the argument supplied when calling the function.
+Use Switch. (hint do a google search for 'switch(true)' )
+
+    Write a function that will return an array of arrays with 100 copies of each element in the array supplied in the as an argument of the function. 
+The array in the parameter needs to be strings and needs to have at least 5 elements.
+    (ridiculous unessery challenge..seriously dont try this unless you are just wanting a challange) 
+    complete the above with the following requirements (it can be more than one function for this):
+    Without mutating anything (strings, arrays etc). This means no variable can change and no array can be added to or removed from. (look up imutability)
+    Without Using any loops
+    Without using forEach, map, filter, or reduce.
+(seriously please do not spend more than 30 minutes trying to do this) -->
+
+<html>
+    <head>
+        <title>JS Execises</title>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <script>
+        
+            // #1
+            let testName = "Jar jar"
+            switch(testName) {
+                case "Yoda":
+                    console.log("Im way too old")
+                case "Obiwan":
+                    console.log("May the force be with you")
+                case "Jar jar":
+                    console.log("meeessa stupid")
+                default:
+                    console.log("You didn't enter any of the names")
+            }
+            console.log('%c Its Really Cold', 'background: #222; color: #c4ffff');
+            // #2
+            
+            temperatureSpectrum(36)
+            
+            function temperatureSpectrum(temp) {
+                switch (temp) {
+                    case (temp<10):
+                        console.log('%c Its Really Really Cold', 'background: #222; color: #c4ffff');
+                    case (temp>10 && temp<30):
+                        console.log('%c Pretty Darn Cold', 'background: #222; color: #c4ffee');
+                    case (temp>30 && temp<50):
+                        console.log('%c Pretty Cold', 'background: #222; color: #daffd1');
+                    case (temp>50 && temp<70):
+                        console.log('%c Lightly Cold', 'background: #222; color: #f8ffdb');
+                    case (temp>70 && temp<90):
+                        console.log('%c Pretty Nice Temp', 'background: #222; color: #fff8db');
+                    case (temp>90):
+                        console.log('%c Hot Temp!', 'background: #222; color: #ff7f7a');
+                    default:
+                        console.log("Your number was not in the spectrum")
+                }
+            }
+
+            
+
+        </script>
+    </body>
+</html>

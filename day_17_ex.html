@@ -300,7 +300,7 @@
         var mobileCharacters = new Array()
         Object.keys(characters).forEach((key, index) => {
             if (characters[key].vehicles.length && characters[key].starships.length >= 1) {
-                mobileCharacters.push([characters[key].name, characters[key].mass])
+                mobileCharacters.push(characters[key])
                 //console.log(typeof characters[key].mass); // Prints type of mass
             }
         })

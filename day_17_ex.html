@@ -3,29 +3,10 @@
         <title>Day 17</title>
     </head>
     <body>
-        <h1>Day17</h1>
+        <h1>Day17 EX</h1>
         <script>
-        
-        import { hello } from './hello.mjs'
 
-        // Create a function that accepts an array as an argument and for every item in the array return a new 
-        // array of objects where each object has two keys. Item and index. The value should be the element from the array and the index respectivly. 
-
-        const objectList = testArr => {
-            return testArr.map((name, index)=> ({name:name, index:index}))
-        }
-        console.log(objectList(['red', 'blue', 'red', 'green']))
-        
-        // Use the array of object provided in the file "swapi.js" for the next several items.
-        // Create an array of only the names.
-        // Create an array that includes the name and mass of all charectors who mass is greater than 50.
-        // Make sure you check the type of the mass.
-        // Create an array of objects of only the characters that have at  least one starship. The objects only need 'name' and 'hasStarship' as its keys.
-        // create an array of names of only the charecters who have both a starship and a vehicle. 
-
-        // Still Working On It In A Different File
-
-        let charecters = [
+        let characters = [
     {
         "name": "Luke Skywalker", 
         "height": "172", 
@@ -281,6 +262,50 @@
         "url": "http://swapi.dev/api/people/10/"
     }
 ]
+
+
+        // Create a function that accepts an array as an argument and for every item in the array return a new 
+        // array of objects where each object has two keys. Item and index. The value should be the element from the array and the index respectivly. 
+
+        const objectList = testArr => {
+            return testArr.map((name, index)=> ({name:name, index:index}))
+        }
+        console.log(objectList(['red', 'blue', 'red', 'green']))
+        
+        // Use the array of object provided in the file "swapi.js" for the next several items.
+        // Create an array of only the names.
+        // Create an array that includes the name and mass of all charectors who mass is greater than 50.
+        // Make sure you check the type of the mass.
+        // Create an array of objects of only the characters that have at  least one starship. The objects only need 'name' and 'hasStarship' as its keys.
+        // create an array of names of only the charecters who have both a starship and a vehicle. 
+
+        // Array of all the names
+        Object.keys(characters).forEach((key, index) => {
+            let nameList = characters[key].name
+            console.log(nameList)
+        })
+
+        // Mass > 50 Characters
+        var highMassCharacters = new Array()
+        Object.keys(characters).forEach((key, index) => {
+            if (characters[key].mass > 50) {
+                highMassCharacters.push([characters[key].name, characters[key].mass])
+                //console.log(typeof characters[key].mass); // Prints type of mass
+            }
+        })
+        console.log(highMassCharacters)
+
+
+        // > 1 Starship && > 1 Vehicle
+        var mobileCharacters = new Array()
+        Object.keys(characters).forEach((key, index) => {
+            if (characters[key].vehicles.length && characters[key].starships.length >= 1) {
+                mobileCharacters.push([characters[key].name, characters[key].mass])
+                //console.log(typeof characters[key].mass); // Prints type of mass
+            }
+        })
+        console.log(mobileCharacters)
+
 
         </script>
     </body>

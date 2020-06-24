@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dom Excercises
+        </title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+<body>
+        <!-- <h1 id="heading">Toppings</h1>
+        <ul id="list">
+          <li id="lettuce" class="green list-item">Lettuce</li>
+          <li id="tomato" class="red list-item">Tomato</li>
+          <li id="cheese" class="yellow list-item">Cheese</li>
+          <li id="burger" class="list_item">Burger</li>
+          <li id="lettuce" class="lettuce">Burger</li>
+        </ul> -->
+        
+        <script>
+
+            // Title Of the Page
+            let title = document.createElement("h1")
+            title.classList.add("title")
+            title.innerText = "Tyler's Page"
+            document.body.append(title)
+
+            // Container for the navigation items
+            let navContainer = document.createElement("h2")
+            navContainer.classList.add("nav_container")
+            document.body.append(navContainer)
+
+            // Nav Item 1
+            let nav_i_1 = document.createElement("span")
+            nav_i_1.classList.add("nav_item")
+            nav_i_1.innerHTML = "Interests"
+            navContainer.appendChild(nav_i_1)
+
+            // Nav Item 2
+            let nav_i_2 = document.createElement("span")
+            nav_i_2.classList.add("nav_item")
+            nav_i_2.innerHTML = "About Me"
+            navContainer.appendChild(nav_i_2)
+
+            // About Me Lbl
+            let aboutMe = document.createElement("h2")
+            aboutMe.classList.add("title")
+            aboutMe.innerText = "About Me"
+            document.body.append(aboutMe)
+
+            // Adding an image
+            var img = document.createElement("IMG");
+            img.setAttribute("src", "tesla.jpg");
+            img.setAttribute("width", "80%");
+            img.setAttribute("height", "80%");
+            document.body.append(img)
+
+            // About me paragraph
+            let aboutMeP = document.createElement("h4")
+            aboutMeP.innerText = "Hello There! My name is Tyler Rutt, and this is my page. Obviously I enjoy programming which is why I have created this site."
+            document.body.append(aboutMeP)
+
+            // 'Interests' Header
+            let interestsHeader = document.createElement("h2")
+            interestsHeader.classList.add("title")
+            interestsHeader.innerText = "Interests"
+            document.body.append(interestsHeader)
+
+            let interestsList = document.createElement("ul")
+            document.body.append(interestsList)
+
+            const addDislikeItem = (item) => {
+                let listItem = document.createElement("li")
+                listItem.innerText = item
+                dislikesList.appendChild(listItem)
+            }
+
+            const addInterestItem = (item) => {
+                let listItem = document.createElement("li")
+                listItem.innerText = item
+                interestsList.appendChild(listItem)
+            }
+
+            addInterestItem("App Development/iOS Dev. Making Games and such")
+            addInterestItem("Running")
+            addInterestItem("Playing Other Studios Games")
+            addInterestItem("Star Wars Movies, + Clone Wars Series")
+
+            // 'Dislikes' Header
+            let dislikesHeader = document.createElement("h2")
+            dislikesHeader.innerText = "Dislikes"
+            document.body.append(dislikesHeader)
+
+            let dislikesList = document.createElement("ul")
+            document.body.append(dislikesList)
+
+            addDislikeItem("Headaches")
+            addDislikeItem("That the Clone Wars Series is over :(")
+            addDislikeItem("Traffic")
+      
+
+        </script>
+    </body>
+</body>
+</html>
